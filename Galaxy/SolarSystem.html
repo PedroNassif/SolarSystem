@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            overflow: hidden;
+        }
+        .container {
+            font-size: 10px;
+            width: 50em;
+            height: 50em;
+            position: relative;
+        }
+
+        .sun{
+            position: absolute;
+            top:15em;
+            left: 15em;
+            width: 15em;
+            height: 15em;
+            background-color: yellowgreen;
+            border-radius: 50%;
+            box-shadow: 0 0 3em white;
+        }
+
+
+
+        .earth,.moon,.mercury,.mars{
+            position: absolute;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+            border-width: 0.1em 0.1em;
+            border-radius: 50%;
+        }
+
+        .earth{
+            top: 3em;
+            left: 3em;
+            width: 40em;
+            height: 40em;
+            animation: orbit 36.5s linear infinite;
+        }
+
+        .moon{
+            top: 2em;
+            left: 30.5em;
+            width: 10em;
+            height: 10em;
+            animation: orbit 0.01s linear infinite; 
+        }
+        .mercury{
+            top: 8em;
+            left: 8em;
+            width: 30em;
+            height: 30em;
+            animation: orbit 5.8s linear infinite;
+        }
+
+        .mars{
+            top: -6.8em;
+            left: -6.8em;
+            width: 60em;
+            height: 60em;
+            animation: orbit 73s linear infinite;
+        }
+        .earth::before,
+        .moon::before,.mercury::before,.mars::before{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+        }
+        .earth::before{
+            top: 4.8em;
+            right: 1.8em;
+            width: 5em;
+            height: 5em;
+            background-color: rgb(0, 132, 255);
+        }
+
+        .mercury::before{
+            top: 4.3em;
+            right: 2.4em;
+            width: 2em;
+            height: 2em;
+            background-color: rgb(129, 125, 125);
+        }
+
+        .moon::before{
+            top: 1.3em;
+            right: 0.8em;
+            width: 0.8em;
+            height: 0.8em;
+            background-color: silver;
+        }
+
+        .mars::before{
+            top: 8.5em;
+            right: 6.3em;
+            width: 3em;
+            height: 3em;
+            background-color: rgb(146, 61, 61);
+        }
+
+        
+        @keyframes orbit{
+            to{
+                transform: rotate(360deg);
+            } 
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+        <div class="mercury"></div>
+        <div class="mars"></div>
+        
+    </div>
+</body>
+</html>
