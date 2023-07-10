@@ -1,6 +1,5 @@
-# Olá, Mundo!
- Primeiro repositório do curso de Git e GitHub
+# Sistema Solar em JS
 
- Repositório criado durante uma aula au vivo.
+Meu primeiro projeto teste.
 
- Essa lina, de número 6. Eu aditei no próprio site GitHub
+Fui inspirado por um vído no TikTok, e deposi corri com minhas próprias pernas.
